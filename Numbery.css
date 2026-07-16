@@ -1,0 +1,149 @@
+
+/* Fondo o negro o azul,  */
+body {
+    background: #000000;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.hidden { display: none; }
+
+
+.title {
+    font-size: 48px;
+    margin-top: 40px;
+    color: #4fc3f7;
+    text-shadow: 0 0 20px #4fc3f7;
+}
+
+
+.enjoy-text {
+    font-size: 26px;
+    margin-top: -10px;
+    color: #81d4fa;
+    font-weight: bold;
+}
+
+/* Lo dejo verde al final, cmabiar depende de lo que vea al fiinal */
+.key-highlight {
+    color: #5df74f;
+    font-weight: bold;
+    font-size: 24px;
+    text-shadow: 0 0 10px #5df74f;
+}
+
+
+.cool-button {
+    margin: 25px auto;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background: #4fc3f7;
+    color: #000;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cool-button:hover {
+    background: #81d4fa;
+    transform: scale(1.05);
+}
+
+
+#big-space {
+    font-size: 50px;
+    margin-top: 10px;
+    color: #5df74f;
+    font-weight: bold;
+    text-shadow: 0 0 15px #5df74f;
+    animation: pulseSpace 1.3s infinite ease-in-out;
+}
+
+@keyframes pulseSpace {
+    0% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.18); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.7; }
+}
+
+
+#number-box {
+    font-size: 80px;
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 200px;
+}
+
+
+.slide-left {
+    animation: slideLeft 0.4s forwards;
+}
+
+.slide-right {
+    animation: slideRight 0.4s forwards;
+}
+
+@keyframes slideLeft {
+    from { transform: translateX(0); opacity: 1; }
+    to   { transform: translateX(-150px); opacity: 0; }
+}
+
+@keyframes slideRight {
+    from { transform: translateX(0); opacity: 1; }
+    to   { transform: translateX(150px); opacity: 0; }
+}
+
+#difficulty-select {
+    margin-top: 20px;
+}
+
+.diff-btn {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: default;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.diff-btn.selected {
+    outline: 3px solid white;
+    transform: scale(1.08);
+}
+
+
+.diff-btn[data-diff="easy"] { background: #00ff7f; color: #003f1f; }
+.diff-btn[data-diff="medium"] { background: #ffa500; color: #4a2c00; }
+.diff-btn[data-diff="hard"] { background: #ff4d4d; color: #3f0000; }
+
+.easy-number { color: #00ff7f; }
+.medium-number { color: #ffa500; }
+.hard-number { color: #ff4d4d; }
+
+
+#score-bar {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    width: 80%;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#score-label { color: #00ff7f; }
+#best-label { color: #4fc3f7; }
+#impostor-label { color: #ff4d4d; }
+
+
+#difficulty-timer {
+    font-size: 40px;
+    margin-top: 20px;
+    color: #4fc3f7;
+}
